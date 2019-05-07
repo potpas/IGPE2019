@@ -7,8 +7,9 @@ public class Prodotto {
        private String modello;
        private int AnnoDiProduzione;
        private String tipo;
+       private int quantita;
        
-	public Prodotto(double prezzo, String marca, String codice, String modello, int annoDiProduzione, String tipo) {
+	public Prodotto(double prezzo, String marca, String codice, String modello, int annoDiProduzione, String tipo, int quantita) {
 		super();
 		this.prezzo = prezzo;
 		this.marca = marca;
@@ -16,6 +17,8 @@ public class Prodotto {
 		this.modello = modello;
 		this.AnnoDiProduzione = annoDiProduzione;
 		this.tipo = tipo;
+		this.quantita = quantita;
+		
 	}
 
 	public double getPrezzo() {
@@ -66,8 +69,15 @@ public class Prodotto {
 		this.tipo = tipo;
 	}
 	
+	public int getQuantita () {
+		return quantita;
+	}
+	
+	public void setQuantita(int quantita)  {
+		this.quantita = quantita;
+	}
 	
 	public void stampa() {
-		System.out.println( "Prodotto: " + codice + "," + tipo + "," + marca + "," + modello + "," + AnnoDiProduzione + "," + prezzo );
+		System.out.println( "Prodotto: " + codice + "," + tipo + "," + marca + "," + modello + "," + AnnoDiProduzione + "," + prezzo + "." + "Ne rimangono :" + quantita + ".");
 	}       
 }
